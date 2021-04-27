@@ -12,7 +12,7 @@ const Navbar = ({isOpen, cases, close}) => {
                     <span>close</span>
                 </div>
             </div>
-            <ul className='navbar-nav'>
+            <ul className='navbar-nav '>
                 {
                     cases && cases.length > 0 ?
                     Constants.provinces.map((province, index) => {
