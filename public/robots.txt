@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://canadacovidtracker.com
+
+# Sitemaps
+Sitemap: https://canadacovidtracker.com/sitemap.xml

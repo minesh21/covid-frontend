@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+thead > tr {
+    background-color: #f44336;
+}
+
+thead > tr > td {
+    font-weight: 500;
+    width: 100px;
+    color: #fff;
+}
+
+tbody > tr > td {
+    font-weight: 400;
+    width: 100px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+td {
+    padding: 10px;
+    border: none;
+}

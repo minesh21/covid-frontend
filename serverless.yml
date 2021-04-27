@@ -1,0 +1,7 @@
+canadacovidApp:
+  component: "@sls-next/serverless-component@1.18.0"
+  inputs:
+    domain: "canadacovidtracker.com"
+    build:
+      env: { NEXT_PUBLIC_ENV: production }
+       

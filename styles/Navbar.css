@@ -1,0 +1,43 @@
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: -320px ;
+    right: 0;
+    width: 320px;
+    background-color: #455a64;
+    height: 100%;
+    z-index: 999;
+    overflow-y: scroll;
+
+}
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item{
+    list-style-type: none;
+
+}
+
+.navbar-link {
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-link span {
+    display: flex;
+    
+}
+
+.navbar-link:hover {
+    background-color:#607d8b;
+}
+.slideIn {
+    left: 0;
+    transform: ease-in 2.5s;
+}

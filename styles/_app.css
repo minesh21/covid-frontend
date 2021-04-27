@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: Roboto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.covid-summary-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+@media (max-width: 599px) {
+  .covid-summary-block {
+    flex-wrap: wrap;
+  }
+}
+
+.covid-summary-block .card {
+  min-height: 112px;
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  min-height: 340px;
+}
+
+.data-block {
+  min-height: 335px;
+}
+
+@media (max-width: 768px) {
+  .info-block {
+    flex-wrap: wrap;
+  }
+  .info-block > .card {
+    margin-top: 16px;
+  }
+}
+
+.data-block {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.toolbar {
+  display: flex;
+  padding: 25px 15px;
+  border-bottom: 1px solid #cfd8dc;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-text {
+  color: #fff;
+}
+
+.btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #607d8b;
+  padding: 10px;
+  border-radius: 10px;
+  width: 55px;
+  height: 25px;
+}
+
+.btnClose svg{
+  width: 10px;
+    color: #fff;
+}
+
+.btnClose:hover {
+  cursor: pointer;
+}
+
+.btnClose span {
+  margin-left: 5px;
+}
+
+.text-center {
+  text-align: center;
+}

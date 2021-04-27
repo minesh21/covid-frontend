@@ -1,0 +1,25 @@
+<svg width="44px" height="40px" viewBox="0 0 44 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>loader</title>
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <path d="M20,36.3636364 C29.0373868,36.3636364 36.3636364,29.0373868 36.3636364,20 C36.3636364,10.9626132 29.0373868,3.63636364 20,3.63636364 L20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 C8.954305,40 4.03717464e-16,31.045695 4.03717464e-16,20 L4.03717464e-16,20 L3.63636364,20 L3.63636364,20 C3.63636364,29.0373868 10.9626132,36.3636364 20,36.3636364 Z" id="path-1"></path>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Desktop" transform="translate(-25.000000, -28.000000)">
+                <g id="loader" transform="translate(26.000000, 28.000000)">
+                    <g id="Progress-Indicators-/-Circular" transform="translate(3.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Surface"></g>
+                        <g id="CONTAINER-COLOR" mask="url(#mask-2)" fill="#F44336">
+                            <g id="↳-Tonal-Palette">
+                                <rect id="Rectangle-13" x="0" y="0" width="40" height="40"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <polygon id="Triangle" stroke="#F44336" fill="#F44336" points="5 10 10 20 0 20"></polygon>
+                </g>
+            </g>
+        </g>
+    </svg>
