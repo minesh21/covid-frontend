@@ -16,7 +16,7 @@ const Navbar = ({isOpen, cases, close}) => {
                 {
                     cases && cases.length > 0 ?
                     Constants.provinces.map((province, index) => {
-                        const provCase = cases.find(g => g._id === province.slug);
+                        const provCase = cases.find(g => g.province === province.slug);
                         return (
                             <li key={index} className='navbar-item'>
                                 <a  className='navbar-link' href={`/${province.short}`}>

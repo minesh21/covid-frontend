@@ -18,6 +18,8 @@ import TableBody from '../components/Table/TableBody';
 import Navbar  from '../components/Navbar/Navbar';
 import Loader from '../components/Loader/Loader';
 import { Constants } from '../constants';
+import { environment } from '../environments';
+import ReactGA from 'react-ga'
 
 const App = () => {
   const router = useRouter();
@@ -35,6 +37,7 @@ const App = () => {
 
   useEffect(() => {
     let slug = '';
+    
     if (router.asPath === '/') {
       setProvince('Canada');
       slug = 'Canada'
@@ -46,6 +49,12 @@ const App = () => {
     }
 
     setLoading(true);
+
+    if (environment.env === 'prod') {
+      ReactGA.initialize(environment.tagId);
+      ReactGA.set({ page: province })
+      ReactGA.pageview(router.asPath)
+    }
 
     Promise.all([
       ActiveCaseService.get(slug, from, to), 
@@ -77,6 +86,7 @@ const App = () => {
         loading ? <div className='text-center'><Loader /></div> : 
         <div>
             <Navbar isOpen={sidebarIsOpen} cases={provCases} close={toggleNavbar}/>
+            <h1 className="page-title">Updates in {province} for the past 6 days</h1>
       {
         activeCasesData && activeCasesData.length > 0 ?
         <Summary
@@ -94,7 +104,7 @@ const App = () => {
               title='Daily Case Changes'
               type='line'
               data={casesData}
-              field='cases'/>
+              field='cumulative_cases'/>
           </Card>
           : null
         }
@@ -122,7 +132,7 @@ const App = () => {
                 title='Daily Recovered Changes'
                 type='line'
                 data={recoveredCasesData}
-                field='recovered'/>
+                field='cumulative_recovered'/>
             </Card>
             : null
           }
@@ -134,7 +144,7 @@ const App = () => {
                 title='Daily Mortality Changes'
                 type='line'
                 data={mortalityCasesData}
-                field='deaths'/>
+                field='cumulative_deaths'/>
             </Card>
             : null
           }
@@ -176,6 +186,13 @@ const App = () => {
               </TableBody>
             </Table>
           </Card>   
+
+          <footer className="footer">
+              <div className="footer-inner">
+                <p>Version <b>3.0.0</b></p>
+                <p><b>Data provided by the  <a rel="nofollow" target="_blank" tabIndex="0" href="https://github.com/ccodwg/Covid19Canada">COVID-19 Canada Open Data Working Group</a></b></p>
+              </div>
+          </footer>
         </div> : null
         } 
         </div>

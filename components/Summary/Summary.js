@@ -35,7 +35,7 @@ const Summary = ({currentActiveCase, previousActiveCase}) => {
           <Card 
             fullWidth={true}
             title='Total Recovered'  
-            badgeComponent={<Badge value={(recoverdDiff === 'success' ? '+' : '-') + recoverdDiff.toLocaleString()} color={recoveredColor}/>}>
+            badgeComponent={<Badge value={(recoverdDiff === 'success' ? '' : '+') + recoverdDiff.toLocaleString()} color={recoveredColor}/>}>
               <h1>{parseInt(currentActiveCase.cumulative_recovered).toLocaleString()}</h1>
           </Card>
           <Card 
