@@ -5,6 +5,7 @@ import '../styles/Header.css';
 import '../styles/Loader.css';
 import '../styles/Navbar.css';
 import '../styles/Table.css';
+import '../styles/Map.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

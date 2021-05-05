@@ -12,9 +12,12 @@ const SeoHead = ({province}) => {
             <meta name="robots" content="noindex" />
             <meta  name="description" content={`Most up-to-date data for ${province}. Providing you with update-to-date reults on change in cases, the overall number of cases, deaths, recovered and deaths. Please stay safe and informed.  ` } />
             <link rel="apple-touch-icon" href="/assets/favicon.ico" />
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
             <script async defer src="/assets/js/fontawesome.min.js"></script>
             <script async defer src="/assets/js/regular.min.js"></script>
-
+            <script async defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                    crossorigin=""></script>
             {
                 process.env.NEXT_PUBLIC_ENV === 'production' ?
                 <script  async

@@ -15,6 +15,22 @@ const provinces = [
     {short: 'yu', long: 'Yukon', slug: 'Yukon'}
 ]
 
+const centerLatLng = {
+    ab: [53.9333, -116.5765],
+    bc: [53.7267, -127.6476],
+    mb: [53.7609, -98.8139],
+    nl: [53.1355, -57.6604],
+    nt: [64.8255, -124.8457],
+    ns: [44.6820, -63.7443],
+    nu: [70.2998, -83.1076],
+    pe: [46.5107, -63.4168],
+    sk: [52.9399, -106.4509],
+    qc: [46.8139, -71.2080],
+    yu: [64.2823, -135.0000],
+    on: [51.2538, -85.3232]
+}
+
 export const Constants = {
-    provinces
+    provinces,
+    centerLatLng
 }

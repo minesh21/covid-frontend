@@ -1,0 +1,21 @@
+.leaflet-container { 
+    width: 100%;
+    min-height: 360px;
+    max-height: 360px;
+}
+
+.custom-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    color: #fff;
+    font-size: 9px;
+}
+
+.custom-marker span{
+    display: flex;
+    flex-direction: column;
+}

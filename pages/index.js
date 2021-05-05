@@ -21,6 +21,10 @@ import { Constants } from '../constants';
 import { environment } from '../environments';
 import ReactGA from 'react-ga'
 
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() =>  import ('../components/Map/Map'), {ssr: false})
+
 const App = () => {
   const router = useRouter();
   
@@ -55,6 +59,7 @@ const App = () => {
       ReactGA.set({ page: province })
       ReactGA.pageview(router.asPath)
     }
+
 
     Promise.all([
       ActiveCaseService.get(slug, from, to), 
@@ -95,8 +100,14 @@ const App = () => {
         />
         : null
       }
+
       <div className="info-block">
-      
+        <Card fullWidth={true} style={{height: '500px'}}>
+            <Map location={'ca'} cases={provCases}/>
+        </Card>
+      </div>
+
+      <div className="info-block">
       {
           casesData && casesData.length > 0 ? 
           <Card fullWidth={true}>
